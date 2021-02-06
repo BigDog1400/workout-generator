@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout/layout";
+import SelectorFocusRoutine from "../components/selector-focus-routine/SelectorFocusRoutine";
+import SelectorLevelRoutine from "../components/selector-level-routine/SelectorLevelRoutine";
 export default function Home() {
   return (
     <Layout>
@@ -13,8 +15,12 @@ export default function Home() {
             <h1 className='primary-color'>VUAMOS</h1>
           </div>
           <div className='container-home-page__options'>
-            <div className='container-home-page__option-level'></div>
-            <div className='container-home-page__option-body-target'></div>
+            <div className='container-home-page__option-level'>
+              <SelectorLevelRoutine />
+            </div>
+            <div className='container-home-page__option-body-target'>
+              <SelectorFocusRoutine />
+            </div>
           </div>
         </div>
       </div>
@@ -41,6 +47,7 @@ export default function Home() {
         .container-home-page__start-routine-button h1 {
           font-family: "Open Sans", sans-serif;
           font-weight: bold;
+          margin-bottom: 0rem;
         }
         .container-home-page__start-routine-button h1:hover {
           cursor: pointer;
@@ -49,12 +56,13 @@ export default function Home() {
         .container-home-page__options {
           display: flex;
           flex: 1 0 auto;
-          background-color: gray;
         }
         .container-home-page__option-level,
         .container-home-page__option-body-target {
-          flex: 1 0 auto;
-          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 0 0 50%;
         }
       `}</style>
     </Layout>
