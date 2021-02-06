@@ -1,65 +1,62 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
+import Head from "next/head";
+import Layout from "../components/layout/layout";
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <Layout>
+      <div className='container-home-page'>
+        <Head>
+          <title>Acalisthenics Workout Generator</title>
+          <link rel='icon' href='/favicon.ico' />
+        </Head>
+        <div className='container-home-page__controls'>
+          <div className='container-home-page__start-routine-button'>
+            <h1 className='primary-color'>VUAMOS</h1>
+          </div>
+          <div className='container-home-page__options'>
+            <div className='container-home-page__option-level'></div>
+            <div className='container-home-page__option-body-target'></div>
+          </div>
         </div>
-      </main>
+      </div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      <style jsx>{`
+        .container-home-page {
+          display: flex;
+          flex: 0 0 96%;
+          margin: auto;
+          height: 84vh;
+          background-color: #e5e5e5;
+        }
+        .container-home-page__controls {
+          flex: 1 0 100%;
+          margin: 0 auto;
+          display: flex;
+          flex-flow: column;
+        }
+        .container-home-page__start-routine-button {
+          margin: 0 auto;
+          font-size: 4rem;
+          font-weight: bold;
+        }
+        .container-home-page__start-routine-button h1 {
+          font-family: "Open Sans", sans-serif;
+          font-weight: bold;
+        }
+        .container-home-page__start-routine-button h1:hover {
+          cursor: pointer;
+          color: white;
+        }
+        .container-home-page__options {
+          display: flex;
+          flex: 1 0 auto;
+          background-color: gray;
+        }
+        .container-home-page__option-level,
+        .container-home-page__option-body-target {
+          flex: 1 0 auto;
+          background-color: white;
+        }
+      `}</style>
+    </Layout>
+  );
 }

@@ -1,0 +1,17 @@
+.containerHomePage {
+  display: flex;
+  flex: 0 0 96%;
+  margin: auto;
+  height: 84vh;
+  background-color: #e5e5e5;
+
+  div .container-main-page__options {
+    margin: 0 auto;
+    background-color: red;
+  }
+  .container-main-page {
+    &__options {
+      margin: 0 auto;
+    }
+  }
+}
