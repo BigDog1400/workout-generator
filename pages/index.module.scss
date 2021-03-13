@@ -1,17 +1,41 @@
-.containerHomePage {
+.HomePageWrapper {
   display: flex;
   flex: 0 0 96%;
   margin: auto;
   height: 84vh;
   background-color: #e5e5e5;
+}
 
-  div .container-main-page__options {
-    margin: 0 auto;
-    background-color: red;
+.RoutineControlsSection {
+  flex: 1 0 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+
+  h1 {
+    font-size: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
   }
-  .container-main-page {
-    &__options {
-      margin: 0 auto;
+  &Options {
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &Option {
+    display: flex;
+    align-items: center;
+    flex: 0 0 50%;
+    min-width: 200px;
+    @media screen and (min-width: 425px) {
+      min-width: 250px;
+    }
+    @media screen and (min-width: 768px) {
+      min-width: 350px;
+    }
+    @media screen and (min-width: 1024px) {
+      justify-content: center;
+      min-width: 250px;
     }
   }
 }

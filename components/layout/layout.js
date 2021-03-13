@@ -16,7 +16,7 @@ export default function Layout({ children }) {
           content='Generador de rutinas para atletas de Calistenia'
         />
       </Head>
-      <main>{children}</main>
+      <main className={styles.target}>{children}</main>
     </div>
   );
 }

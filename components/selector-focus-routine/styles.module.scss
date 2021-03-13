@@ -1,0 +1,29 @@
+.SelectorFocusRoutine {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+
+  &Focus {
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    &__label {
+      font-family: "Lato", sans-serif;
+      font-size: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
+      font-weight: bold;
+      text-align: left;
+      color: #333;
+    }
+    &__label:hover {
+      color: #fe0d15;
+    }
+    &__labelIcon {
+      height: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
+      position: absolute;
+      transform: translate(-120%, 10%);
+      color: #333;
+    }
+  }
+}
