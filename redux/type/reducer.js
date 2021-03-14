@@ -1,4 +1,4 @@
-import { typeActionTypes } from "./action";
+import * as actionTypes from "./types";
 
 const typeInitialState = {
   type: ""
@@ -6,7 +6,7 @@ const typeInitialState = {
 
 export default function reducer(state = typeInitialState, action) {
   switch (action.type) {
-    case typeActionTypes.CHANGE:
+    case actionTypes.CHANGE:
       return Object.assign({}, state, {
         type: action.newType
       });
