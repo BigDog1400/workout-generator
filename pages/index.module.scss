@@ -13,8 +13,17 @@
   flex-flow: column;
   text-align: center;
 
-  h1 {
-    font-size: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
+  h1{
+    font-size: clamp(2rem, 1.1867rem + 3.6145vw, 5rem);
+    margin-bottom: 0;
+  }
+  h1:hover{
+    transition: all 0.2s;
+    transform: scale(1.1,1.1);
+  }
+  h1 span:hover {
+   color: #333;
+   cursor: pointer;
   }
   &Options {
     display: flex;

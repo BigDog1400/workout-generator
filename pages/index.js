@@ -14,7 +14,9 @@ export default function Home() {
       </Head>
       <div className={styles.HomePageWrapper}>
         <div className={styles.RoutineControlsSection}>
-          <h1 className='primary-color'>VUAMOS</h1>
+          <h1 className='primary-color'>
+            <span>VUAMOS</span>
+          </h1>
           <div className={styles.RoutineControlsSectionOptions}>
             <div className={styles.RoutineControlsSectionOption}>
               <SelectorLevelRoutine></SelectorLevelRoutine>
