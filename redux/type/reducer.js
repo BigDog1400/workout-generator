@@ -1,14 +1,15 @@
 import * as actionTypes from "./types";
 
 const typeInitialState = {
-  type: ""
+  name: ""
 };
 
 export default function reducer(state = typeInitialState, action) {
   switch (action.type) {
     case actionTypes.CHANGE:
+      console.log(action.newType);
       return Object.assign({}, state, {
-        type: action.newType
+        name: action.newType
       });
     default:
       return state;

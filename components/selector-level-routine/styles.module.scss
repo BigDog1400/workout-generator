@@ -20,7 +20,7 @@
       color: #fe0d15;
     }
     &__labelIcon {
-      height: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
+      font-size: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
       position: absolute;
       transform: translate(-120%, 10%);
       color: #333;

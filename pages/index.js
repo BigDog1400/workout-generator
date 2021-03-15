@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout/layout";
-import SelectorFocusRoutine from "../components/selector-focus-routine/SelectorFocusRoutine";
-import SelectorLevelRoutine from "../components/selector-level-routine/SelectorLevelRoutine";
+import SelectorTypeRoutine from "../components/selector-type-routine";
+import SelectorLevelRoutine from "../components/selector-level-routine";
 
 import styles from "./index.module.scss";
 
@@ -20,7 +20,7 @@ export default function Home() {
               <SelectorLevelRoutine></SelectorLevelRoutine>
             </div>
             <div className={styles.RoutineControlsSectionOption}>
-              <SelectorFocusRoutine></SelectorFocusRoutine>
+              <SelectorTypeRoutine></SelectorTypeRoutine>
             </div>
           </div>
         </div>

@@ -3,18 +3,18 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./styles.module.scss";
 import { connect } from "react-redux";
-import { changeType } from "../../redux/type/action";
+import { changeLevel } from "../../redux/level/actions";
 import { levelTrainings } from "../../constants/levelTrainings";
 
-const SelectorLevelRoutine = ({ typeTrainingSelected, changeType }) => {
+const SelectorLevelRoutine = ({ levelTrainingSelected, changeLevel }) => {
   const handleChangeDifficult = (type) => {
-    changeType(type);
+    changeLevel(type);
   };
   return (
     <div className={styles.SelectorLevelRoutine}>
       {levelTrainings.map((level) => (
         <div className={styles.SelectorLevelRoutineLevel}>
-          {typeTrainingSelected === level.name ? (
+          {levelTrainingSelected === level.name ? (
             <FontAwesomeIcon
               icon={faChevronRight}
               className={styles.SelectorLevelRoutineLevel__labelIcon}
@@ -32,12 +32,12 @@ const SelectorLevelRoutine = ({ typeTrainingSelected, changeType }) => {
   );
 };
 
-const mapStateToProps = ({ typeTraining }) => {
+const mapStateToProps = ({ levelTraining }) => {
   return {
-    typeTrainingSelected: typeTraining.type
+    levelTrainingSelected: levelTraining.level
   };
 };
 
 export default connect(mapStateToProps, {
-  changeType
+  changeLevel
 })(SelectorLevelRoutine);
