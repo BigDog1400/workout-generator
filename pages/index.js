@@ -6,6 +6,9 @@ import SelectorLevelRoutine from "../components/selector-level-routine";
 import styles from "./index.module.scss";
 
 export default function Home() {
+  const startRoutine = () => {
+    console.log("start routine");
+  };
   return (
     <Layout>
       <Head>
@@ -14,6 +17,9 @@ export default function Home() {
       </Head>
       <div className={styles.HomePageWrapper}>
         <div className={styles.RoutineControlsSection}>
+          <h1>
+            <span>Workout Generator</span>
+          </h1>
           <div className={styles.RoutineControlsSectionOptions}>
             <div className={styles.RoutineControlsSectionOption}>
               <SelectorLevelRoutine></SelectorLevelRoutine>
@@ -23,7 +29,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.StartButton}>
-            <h1>
+            <h1 onClick={startRoutine}>
               <span>VUAMOS</span>
             </h1>
           </div>
