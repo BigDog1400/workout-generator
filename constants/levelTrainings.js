@@ -8,7 +8,7 @@ export const levelTrainings = [
     label: "Intermedio"
   },
   {
-    name: "hard",
+    name: "advanced",
     label: "Difícil"
   }
 ];
