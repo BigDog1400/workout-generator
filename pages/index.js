@@ -29,9 +29,9 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.StartButton}>
-            <h1 onClick={startRoutine}>
+            <h2 onClick={startRoutine}>
               <span>VUAMOS</span>
-            </h1>
+            </h2>
           </div>
         </div>
       </div>

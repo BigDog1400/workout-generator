@@ -50,7 +50,7 @@
   min-width: 250px;
   max-width: 370px;
   border-radius: 20rem;
-  h1 {
+  h2 {
     transition: all 0.2s;
 
     margin: 0.2rem;
@@ -58,7 +58,7 @@
       transform: scale(1.1, 1.1);
     }
   }
-  h1 span {
+  h2 span {
     color: white;
     cursor: pointer;
     font-size: clamp(1rem, 1.1867rem + 3.6145vw, 2.5rem);
