@@ -7,6 +7,7 @@
   &Level {
     cursor: pointer;
     display: flex;
+    position: relative;
     flex-flow: row;
     align-items: center;
     &__label {
@@ -20,7 +21,7 @@
       color: rgb(237, 44, 73);
     }
     &__labelIcon {
-      font-size: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
+      height: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
       position: absolute;
       transform: translate(-120%, 10%);
       color: #333;
