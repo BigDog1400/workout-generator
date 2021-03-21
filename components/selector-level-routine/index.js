@@ -16,8 +16,8 @@ const SelectorLevelRoutine = ({ levelTrainingSelected, changeLevel }) => {
   };
   return (
     <div className={styles.SelectorLevelRoutine}>
-      {levelTrainings.map((level) => (
-        <div className={styles.SelectorLevelRoutineLevel}>
+      {levelTrainings.map((level, index) => (
+        <div key={index} className={styles.SelectorLevelRoutineLevel}>
           {levelTrainingSelected === level.name ? (
             <FontAwesomeIcon
               icon={faChevronRight}

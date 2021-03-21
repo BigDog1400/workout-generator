@@ -15,8 +15,8 @@ const SelectorFocusRoutine = ({ typeTrainingSelected, changeType }) => {
   };
   return (
     <div className={styles.SelectorFocusRoutine}>
-      {typeTrainings.map((type) => (
-        <div className={styles.SelectorFocusRoutineFocus}>
+      {typeTrainings.map((type, index) => (
+        <div className={styles.SelectorFocusRoutineFocus} key={index}>
           {typeTrainingSelected === type.name ? (
             <FontAwesomeIcon
               icon={faChevronRight}
