@@ -7,6 +7,10 @@ import { changeLevel } from "../../redux/level/actions";
 import { levelTrainings } from "../../constants/levelTrainings";
 
 const SelectorLevelRoutine = ({ levelTrainingSelected, changeLevel }) => {
+  useEffect(() => {
+    changeLevel(levelTrainings[0].name);
+  }, [changeLevel]);
+
   const handleChangeDifficult = (type) => {
     changeLevel(type);
   };

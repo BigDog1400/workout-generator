@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./styles.module.scss";
@@ -6,6 +6,10 @@ import { typeTrainings } from "../../constants/typeTrainings";
 import { connect } from "react-redux";
 import { changeType } from "../../redux/type/actions";
 const SelectorFocusRoutine = ({ typeTrainingSelected, changeType }) => {
+  useEffect(() => {
+    changeType(typeTrainings[0].name);
+  }, [changeType]);
+
   const handleChangeTypeRoutine = (newType) => {
     changeType(newType);
   };
