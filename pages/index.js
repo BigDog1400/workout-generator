@@ -6,6 +6,7 @@ import SelectorLevelRoutine from "../components/selector-level-routine";
 import { useSelector } from "react-redux";
 import styles from "./index.module.scss";
 import LoadingSpinner from "../components/loading-spinner";
+import VisualizerRoutine from "../components/visualizer-routine";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -64,7 +65,9 @@ export default function Home() {
             </div>
           </div>
         ) : (
-          <pre>{JSON.stringify(routineGenerate)}</pre>
+          <div className={styles.VisualizerRoutine}>
+            <VisualizerRoutine {...routineGenerate} />
+          </div>
         )}
       </div>
     </Layout>
