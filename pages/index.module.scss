@@ -5,7 +5,11 @@
   height: 84vh;
   background-color: #e5e5e5;
 }
-
+.LoadingSpinner {
+  margin: 0 auto;
+  justify-self: center;
+  align-self: center;
+}
 .RoutineControlsSection {
   flex: 1 0 100%;
   margin: 0 auto;
