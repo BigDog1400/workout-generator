@@ -52,6 +52,7 @@ export default function userHandler(req, res) {
           level: level,
           type: type
         },
+        sets: Math.floor(Math.random() + 4) + 1,
         exercises: getRandomExercises(workout_collection[level][type])
       });
       break;

@@ -35,9 +35,13 @@
   margin: 1rem;
   span {
     padding: 10px;
-    font-size: clamp(0.5rem, 0.8rem + 3.6145vw, 2rem);
+    font-size: clamp(0.5rem, 0.8rem + 3.6145vw, 1.5rem);
     color: #333;
   }
+}
+
+.ExerciseSetsAndReps {
+  font-weight: bold;
 }
 // .RoutineOptions{
 

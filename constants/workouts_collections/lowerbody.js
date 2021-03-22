@@ -2,17 +2,17 @@ export const easy_lowerbody = [
   {
     name: "Jump Squats",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Calf Raises + Hold",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Single Leg Hamstring Bridge",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Lunges",
@@ -27,7 +27,7 @@ export const easy_lowerbody = [
   {
     name: "Wall Sit",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Alternating Side Lunges",
@@ -52,27 +52,27 @@ export const easy_lowerbody = [
   {
     name: "High Knee Taps",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Switching Lunges",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Tip Toe Wall Sit",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Crab Walks",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Side Hops",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   }
 ];
 
@@ -90,7 +90,7 @@ export const intermediate_lowerbody = [
   {
     name: "Switching Lunges",
     amount: "40",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Box Jumps",
@@ -105,12 +105,12 @@ export const intermediate_lowerbody = [
   {
     name: "Tip Toe Wall Sit",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Toe Touches",
     amount: "40",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Bulgarian Split Squat",
@@ -130,12 +130,12 @@ export const intermediate_lowerbody = [
   {
     name: "Broad Jumps",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "High Knee Taps",
     amount: "40",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Calf Raises + Hold",
@@ -145,7 +145,7 @@ export const intermediate_lowerbody = [
   {
     name: "Wall Sit",
     amount: "35",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Squats",
@@ -155,7 +155,7 @@ export const intermediate_lowerbody = [
   {
     name: "Jump Squats",
     amount: "30",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Lunges",
@@ -165,12 +165,12 @@ export const intermediate_lowerbody = [
   {
     name: "Crab Walks",
     amount: "25",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Box Step Up",
     amount: "15",
-    unit: "time"
+    unit: "seconds"
   }
 ];
 
@@ -183,12 +183,12 @@ export const advanced_lowerbody = [
   {
     name: "Tip Toe Wall Sit",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Side Hops",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Single Leg Romanian Deadlift + Knee Raises",
@@ -213,12 +213,12 @@ export const advanced_lowerbody = [
   {
     name: "Narrow Squats",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Switching Lunges",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Jump Squats (Advanced)",
@@ -228,17 +228,17 @@ export const advanced_lowerbody = [
   {
     name: "Side To Side Jump Squats",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Reverse Lunges",
     amount: "25",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "High Knee Taps",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Squat Lunge",
@@ -258,12 +258,12 @@ export const advanced_lowerbody = [
   {
     name: "Wall Sit",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Broad Jumps",
     amount: "35",
-    unit: "time"
+    unit: "seconds"
   },
   {
     name: "Burpees",
@@ -273,6 +273,6 @@ export const advanced_lowerbody = [
   {
     name: "Calf Raises + Hold",
     amount: "45",
-    unit: "time"
+    unit: "seconds"
   }
 ];

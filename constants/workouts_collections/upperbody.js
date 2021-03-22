@@ -86,7 +86,7 @@ export const easy_upperbody = [
   { name: "Incline Push Ups", unit: "reps", amount: 15 },
   { name: "Beginner Skull Crushers (Close Grip)", unit: "reps", amount: 10 },
   { name: "Slow Push Ups", unit: "reps", amount: 12 },
-  { name: "Chin Up Hold", unit: "time", amount: 0 },
+  { name: "Chin Up Hold", unit: "seconds", amount: 0 },
   { name: "Toe Touches", unit: "reps", amount: 15 },
   { name: "Tuck Front Lever Hold", unit: "seconds", amount: 0 }
 ];
