@@ -1,13 +1,13 @@
 .containerLayout {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   .target {
     display: flex;
     flex: 0 1 90%;
-    height: 90vh;
+    min-height: 90vh;
     background-color: #ffffff;
   }
 }

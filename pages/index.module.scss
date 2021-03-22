@@ -2,7 +2,7 @@
   display: flex;
   flex: 0 0 96%;
   margin: auto;
-  height: 84vh;
+  min-height: 84vh;
   background-color: #e5e5e5;
 }
 .LoadingSpinner {
@@ -68,4 +68,12 @@
     font-size: clamp(1rem, 1.1867rem + 3.6145vw, 2.5rem);
     padding: 20px;
   }
+}
+
+.VisualizerRoutine {
+  margin: 0 auto;
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  // align-self: center;
 }
