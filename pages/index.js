@@ -1,13 +1,37 @@
+import { useState } from "react";
 import Head from "next/head";
 import Layout from "../components/layout/layout";
 import SelectorTypeRoutine from "../components/selector-type-routine";
 import SelectorLevelRoutine from "../components/selector-level-routine";
-
+import { useSelector } from "react-redux";
 import styles from "./index.module.scss";
+import LoadingSpinner from "../components/loading-spinner";
 
 export default function Home() {
-  const startRoutine = () => {
-    console.log("start routine");
+  const [loading, setLoading] = useState(false);
+  const [routineGenerate, setRoutineGenerate] = useState(null);
+  const currentOptions = useSelector(({ levelTraining, typeTraining }) => {
+    return {
+      level: levelTraining.level,
+      type: typeTraining.type
+    };
+  });
+  const startRoutine = async () => {
+    setLoading(true);
+    const res = await fetch(`/api/generateRandomRoutine`, {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        ...currentOptions
+      })
+    });
+    const data = await res.json();
+    console.log(data);
+    setRoutineGenerate(data);
+    setLoading(false);
   };
   return (
     <Layout>
@@ -16,24 +40,32 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className={styles.HomePageWrapper}>
-        <div className={styles.RoutineControlsSection}>
-          <h1>
-            <span>Workout Generator</span>
-          </h1>
-          <div className={styles.RoutineControlsSectionOptions}>
-            <div className={styles.RoutineControlsSectionOption}>
-              <SelectorLevelRoutine></SelectorLevelRoutine>
+        {loading ? (
+          <div className={styles.LoadingSpinner}>
+            <LoadingSpinner></LoadingSpinner>
+          </div>
+        ) : !routineGenerate ? (
+          <div className={styles.RoutineControlsSection}>
+            <h1>
+              <span>Workout Generator</span>
+            </h1>
+            <div className={styles.RoutineControlsSectionOptions}>
+              <div className={styles.RoutineControlsSectionOption}>
+                <SelectorLevelRoutine></SelectorLevelRoutine>
+              </div>
+              <div className={styles.RoutineControlsSectionOption}>
+                <SelectorTypeRoutine></SelectorTypeRoutine>
+              </div>
             </div>
-            <div className={styles.RoutineControlsSectionOption}>
-              <SelectorTypeRoutine></SelectorTypeRoutine>
+            <div className={styles.StartButton}>
+              <h2 onClick={startRoutine}>
+                <span>VUAMOS</span>
+              </h2>
             </div>
           </div>
-          <div className={styles.StartButton}>
-            <h2 onClick={startRoutine}>
-              <span>VUAMOS</span>
-            </h2>
-          </div>
-        </div>
+        ) : (
+          <pre>{JSON.stringify(routineGenerate)}</pre>
+        )}
       </div>
     </Layout>
   );
