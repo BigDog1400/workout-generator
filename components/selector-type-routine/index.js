@@ -37,7 +37,7 @@ const SelectorFocusRoutine = ({ typeTrainingSelected, changeType }) => {
 
 const mapStateToProps = ({ typeTraining }) => {
   return {
-    typeTrainingSelected: typeTraining.name
+    typeTrainingSelected: typeTraining.type
   };
 };
 
