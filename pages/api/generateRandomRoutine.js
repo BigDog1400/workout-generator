@@ -34,7 +34,7 @@ const getRandomExercises = (workoutsArray) => {
     const randomExercise = Math.floor(Math.random() * workoutsArray.length);
     if (!indexSelected.includes(randomExercise)) {
       responseRandomExercises.push(workoutsArray[randomExercise]);
-      indexSelected.push(workoutsArray[randomExercise]);
+      indexSelected.push(randomExercise);
     }
   }
   return responseRandomExercises;
