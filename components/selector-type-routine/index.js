@@ -17,12 +17,14 @@ const SelectorFocusRoutine = ({ typeTrainingSelected, changeType }) => {
     <div className={styles.SelectorFocusRoutine}>
       {typeTrainings.map((type, index) => (
         <div className={styles.SelectorFocusRoutineFocus} key={index}>
-          {typeTrainingSelected === type.name ? (
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              className={styles.SelectorFocusRoutineFocus__labelIcon}
-            />
-          ) : null}
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className={`${styles.SelectorFocusRoutineFocus__labelIcon} ${
+              typeTrainingSelected === type.name
+                ? styles.SelectorFocusRoutineFocus__labelIconSelected
+                : null
+            }`}
+          />
           <span
             className={styles.SelectorFocusRoutineFocus__label}
             onClick={() => handleChangeTypeRoutine(type.name)}

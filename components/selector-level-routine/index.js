@@ -18,12 +18,14 @@ const SelectorLevelRoutine = ({ levelTrainingSelected, changeLevel }) => {
     <div className={styles.SelectorLevelRoutine}>
       {levelTrainings.map((level, index) => (
         <div key={index} className={styles.SelectorLevelRoutineLevel}>
-          {levelTrainingSelected === level.name ? (
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              className={styles.SelectorLevelRoutineLevel__labelIcon}
-            />
-          ) : null}
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className={`${styles.SelectorLevelRoutineLevel__labelIcon} ${
+              levelTrainingSelected === level.name
+                ? styles.SelectorLevelRoutineLevel__labelIconSelected
+                : null
+            }`}
+          />
           <span
             className={styles.SelectorLevelRoutineLevel__label}
             onClick={() => handleChangeDifficult(level.name)}

@@ -22,9 +22,12 @@
     }
     &__labelIcon {
       height: clamp(2rem, 1.1867rem + 3.6145vw, 3.5rem);
-      position: absolute;
-      transform: translate(-120%, 10%);
-      color: #333;
+      // position: absolute;
+      // transform: translate(-120%, 10%);
+      color: hsla(0, 0%, 20%, 0.24);
+      &Selected {
+        color: hsl(0, 0%, 20%);
+      }
     }
   }
 }
