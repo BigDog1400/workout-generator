@@ -50,23 +50,19 @@
 .StartButton {
   margin: 1rem auto 2rem;
   background-color: rgb(237, 44, 73);
-  width: 100%;
   min-width: 250px;
   max-width: 370px;
   border-radius: 20rem;
-  h2 {
-    transition: all 0.2s;
-
-    margin: 0.2rem;
-    &:hover {
-      transform: scale(1.1, 1.1);
-    }
-  }
-  h2 span {
-    color: white;
-    cursor: pointer;
-    font-size: clamp(1rem, 1.1867rem + 3.6145vw, 2.5rem);
-    padding: 20px;
+  padding: 0.6rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 0px;
+  color: white;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1rem, 1.1867rem + 3.6145vw, 1.4rem);
+  &:hover {
+    transform: scale(1.1, 1.1);
   }
 }
 

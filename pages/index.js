@@ -58,11 +58,12 @@ export default function Home() {
                 <SelectorTypeRoutine></SelectorTypeRoutine>
               </div>
             </div>
-            <div className={styles.StartButton}>
-              <h2 onClick={startRoutine}>
-                <span>VUAMOS</span>
-              </h2>
-            </div>
+            <button
+              onClick={startRoutine}
+              className={`btn btn-primary ${styles.StartButton}`}
+            >
+              VUAMOS
+            </button>
           </div>
         ) : (
           <div className={styles.VisualizerRoutine}>
